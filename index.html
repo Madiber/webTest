@@ -25,9 +25,20 @@
 
 <script>
 let platform = "not set";
+
+function getPlatform()
+{
+  // window.opener.postMessage({ status: 'success', txnId: '12345' }, '*');
+  if(platform == "OSX")
+  {
+    window.Unity.call('Curren platform: ' + platform);
+  }
+  document.getElementById('platformLabel').innerHTML = 'The current platform is: ' + platform;
+}
+
 </script>
 
-<button id="myBtn2" type="button" onclick="window.opener.postMessage({ status: 'success', txnId: '12345' }, '*'); window.Unity.call('Curren platform: ' + platform); document.getElementById('platformLabel').innerHTML = 'The current platform is: ' + platform;">Say "Hi!" to Unity</button>
+<button id="myBtn2" type="button" onclick="getPlatform();">Say "Hi!" to Unity</button>
 
 <p id="platformLabel"></p>
 
