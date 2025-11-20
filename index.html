@@ -24,7 +24,7 @@
 <p>Inserisci un nome e invialo a Unity.</p>
 
 <script>
-let platform = "";
+let platform = "not set";
 </script>
 
 <button id="myBtn2" type="button" onclick="window.opener.postMessage({ status: 'success', txnId: '12345' }, '*'); window.Unity.call('Curren platform: ' + platform); document.getElementById('platformLabel').innerHTML = 'The current platform is: ' + platform;">Say "Hi!" to Unity</button>
