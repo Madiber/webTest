@@ -20,6 +20,8 @@
 <input type="text" id="nameInput" name="fname"><br><br>
 
 <button id="myBtn" type="button" onclick="alert('Hello world!')">Click Me!</button>
+<br><br>
+<button id="myBtn2" type="button" onclick="window.opener.postMessage({ status: 'success', txnId: '12345' }, '*');">Say "Hi!" to Unity</button>
 
 <p>Inserisci un nome e invialo a Unity.</p>
 
