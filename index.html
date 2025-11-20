@@ -23,9 +23,11 @@
 
 <p>Inserisci un nome e invialo a Unity.</p>
 
-<br><br>
+<script>
+let platform = "";
+</script>
 
-<button id="myBtn2" type="button" onclick="window.opener.postMessage({ status: 'success', txnId: '12345' }, '*');">Say "Hi!" to Unity</button>
+<button id="myBtn2" type="button" onclick="window.opener.postMessage({ status: 'success', txnId: '12345' }, '*'); window.Unity.call('Curren platform: ' + platform);">Say "Hi!" to Unity</button>
 
 <br><br>
 
