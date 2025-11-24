@@ -42,6 +42,18 @@ function getPlatform()
 
 <button id="myBtn2" type="button" onclick="getPlatform();">Say "Hi!" to Unity</button>
 
+<button type="button" id="myBtn4" onclick="messageToUnity()">Message to Unity</button>
+
+
+<script>
+function messageToUnity()
+{
+    window.opener.postMessage({ status: 'success', txnId: '12345' }, '*');
+    console.log("Message to Unity sent!")
+}
+</script>
+
+
 <p id="platformLabel"></p>
 
 <br><br>
