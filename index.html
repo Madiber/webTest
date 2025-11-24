@@ -48,7 +48,7 @@ function getPlatform()
 <script>
 function messageToUnity()
 {
-    window.opener.postMessage({ status: 'success', txnId: '12345' }, '*');
+    window.opener.postMessage({ 'status': 'success', 'txnId': '12345' }, '*');
     console.log("Message to Unity sent!")
 }
 </script>
